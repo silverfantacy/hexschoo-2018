@@ -1,9 +1,100 @@
-<!DOCTYPE html>
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Document
-  body
-    h1 123
+extends layout.pug
+block nav
+  - var page = index
+    case page
+      when index
+        a.nav-item.nav-link.text-hex.active(href='#')
+          | 首頁 
+          span.sr-only (current)
+        a.nav-item.nav-link.text-light(href='#') 課程
+        a.nav-item.nav-link.text-light(href='#') 問答
+block header
+  .mask
+    .container.h-100
+      .banner
+        h1.text-light.font-weight-bold 歡迎來到
+          span.text-hex 六角學院
+          br
+          | 帶你一起攻略前端設計
+        a(href="http://").btn.btn-lg.btn-hex.font-weight-bold 馬上去註冊
+          i.fas.fa-arrow-right.ml-4
+block main
+  .container.py-5
+    //- 精選課程
+    .intro.d-flex.align-items-center.flex-column.flex-md-row.align-items-md-end
+      h2.font-weight-bold.text-hex.mb-md-0 精選課程
+      span.h4.text-secondary.ml-3.mb-md-0 幫助你拿到前端工程師的門票
+      a(href="http://").btn.btn-outline-hex.ml-md-auto 更多課程
+    .card-deck.mt-3.mb-5
+      .card
+        img.card-img-top(src='images/Html.svg', alt='Card image cap', height='135px').mt-5.mb-3
+        .card-body
+          h4.card-title.text-dark.font-weight-bold.text-center Html 5 基礎教學
+          p.card-text
+            | 主流前端網站設計的基礎，透過實際的範例，瞭解正確的網站開發流程。
+      .card
+        img.card-img-top(src='images/RWD.svg', alt='Card image cap', height='135px').mt-5.mb-3
+        .card-body
+          h4.card-title.text-dark.font-weight-bold.text-center 響應式網站設計
+          p.card-text 六角學院提供業界響應式開發方法，讓學生瞭解完善的行動版開發觀念。
+      .card
+        img.card-img-top(src='images/jQuery.svg', alt='Card image cap', height='135px').mt-5.mb-3
+        .card-body
+          h4.card-title.text-dark.font-weight-bold.text-center jQuery 實戰教學
+          p.card-text
+            | 分為四大主題：變數的使用、操作DOM、基本數學運算和套件運用。
+    //- 課程比較
+    .intro.d-flex.align-items-center.flex-column.flex-md-row.align-items-md-end
+      h2.font-weight-bold.text-hex.mb-md-0 課程比較
+      span.h4.text-secondary.ml-3.mb-md-0 線上課程與實體課程的差異
+    .table-responsive.mt-4
+      table.table.text-center.font-weight-bold
+        thead
+          tr
+            th(scope='col') 項目
+            th(scope='col') 六角學院 線上課程
+            th(scope='col') 一般線上課程
+            th(scope='col') 一般實體課程
+        tbody
+          tr
+            th(scope='row') 費用
+            td.text-hex 較低
+            td.text-hex 較低
+            td 較高
+          tr
+            th(scope='row') 學習效果
+            td 一般
+            td 較低
+            td.text-hex 很好
+          tr
+            th(scope='row') Code review
+            td.text-hex 有
+            td 無
+            td 不一定
+          tr
+            th(scope='row') 課程更新速度
+            td.text-hex 普通
+            td.text-hex 普通
+            td 較慢
+          tr
+            th(scope='row') 多次複習
+            td.text-hex 可
+            td.text-hex 可
+            td 不可
+          tr
+            th(scope='row') 字幕
+            td.text-hex 有
+            td 不一定
+            td 板書
+
+block subscribe
+  .col-12.col-md-6.slogan.mb-3
+    div.font-weight-bold.text-center.text-md-left 你就是六角的下一個學生！
+      br
+      | 快留下資料讓我們認識你吧
+  .col-12.col-md-6
+    form
+      .form-group.d-flex.flex-column.mb-0.mb-md-3
+        input#nameInput.mb-3.font-weight-bold(type="text", placeholder="你的名字是？")
+        input#emailInput.mb-3.font-weight-bold(type="email", placeholder="example@mail.com.tw")
+        button.btn.btn-hex.btn-lg.mx-auto.mx-md-0.ml-md-auto(type="submit") 送&nbsp&nbsp&nbsp出

@@ -1,0 +1,49 @@
+//- layout.pug
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Hexschool
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.0.11/css/all.css', integrity='sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/', crossorigin='anonymous')
+    link(href="stylesheets/all.css", rel="stylesheet")
+
+  body
+    .wrapper
+      .menu.fixed-top
+        nav.navbar.navbar-expand-lg.navbar-dark.w-100.p-0
+          .container.px-3
+            a.navbar-brand.logo(href='index.html')
+              img(src="images/header_logo.svg", alt="Hexschool")
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavAltMarkup', aria-controls='navbarNavAltMarkup', aria-expanded='false', aria-label='Toggle navigation')
+              span.navbar-toggler-icon
+            #navbarNavAltMarkup.collapse.navbar-collapse
+              .navbar-nav.text-center.ml-auto.flex-row.justify-content-around
+                block nav
+      header
+        block header
+      main
+        block main
+        .subscribe.d-flex.align-items-center.py-5
+          .container
+            .row.flex-column.flex-md-row
+              block subscribe
+      footer.text-white.py-5
+        .container.d-flex.flex-column-reverse.align-items-center.flex-sm-row.justify-content-sm-between.align-items-sm-center
+          div.position-relative
+            a.logo(href='index.html')
+              img(src="images/header_logo.svg", alt="Hexschool")
+            small.form-text.text-muted.mt-2.mt-sm-0.ml-2.ml-sm-0.text-center.text-sm-right © 2018 hexschool
+          ul.d-flex.flex-row.pl-0
+            li
+              a(href="https://www.facebook.com/hexschool/?hc_ref=ARTFYaw6rOAi3GN0Kw73tNQH1K8GxZhqXV4mH8-XfCKmQc2wHSO1HlfvkszAEXKLiTc&fref=nf")
+                img(src="images/facebook.png", alt="FB")
+            li.ml-3
+              a(href="https://www.facebook.com/hexschool/?hc_ref=ARTFYaw6rOAi3GN0Kw73tNQH1K8GxZhqXV4mH8-XfCKmQc2wHSO1HlfvkszAEXKLiTc&fref=nf")
+                img(src="images/twitter.png", alt="twitter")
+            li.ml-3
+              a(href="https://www.facebook.com/hexschool/?hc_ref=ARTFYaw6rOAi3GN0Kw73tNQH1K8GxZhqXV4mH8-XfCKmQc2wHSO1HlfvkszAEXKLiTc&fref=nf")
+                img(src="images/instagram.png", alt="IG")
+
+  script(src="javascripts/vendor.js")
