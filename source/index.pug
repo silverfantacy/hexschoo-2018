@@ -1,15 +1,12 @@
 extends layout.pug
 block nav
-  - var page = index
-    case page
-      when index
-        a.nav-item.nav-link.text-hex.active(href='#')
-          | 首頁 
-          span.sr-only (current)
-        a.nav-item.nav-link.text-light(href='#') 課程
-        a.nav-item.nav-link.text-light(href='#') 問答
+  a.nav-item.nav-link.text-hex.active(href='index.html')
+    | 首頁 
+    span.sr-only (current)
+  a.nav-item.nav-link.text-light(href='course.html') 課程
+  a.nav-item.nav-link.text-light(href='qa.html') 問答
 block header
-  .mask
+  .mask(style='background-image: url(../images/banner_photo.jpg);')
     .container.h-100
       .banner
         h1.text-light.font-weight-bold 歡迎來到

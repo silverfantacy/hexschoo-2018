@@ -1,0 +1,31 @@
+extends layout.pug
+block nav
+  a.nav-item.nav-link.text-light(href='index.html')
+    | 首頁 
+    span.sr-only (current)
+  a.nav-item.nav-link.text-light(href='course.html') 課程
+  a.nav-item.nav-link.text-hex.active(href='qa.html') 問答
+block header
+  .mask(style='background-image: url(../images/banner_photo3.jpg);')
+    .container.h-100
+      .banner
+        h1.text-light.font-weight-bold 歡迎來到
+          span.text-hex 六角學院
+          br
+          | 帶你一起攻略前端設計
+        a(href="#").btn.btn-lg.btn-hex.font-weight-bold 馬上去註冊
+          i.fas.fa-arrow-right.ml-4
+block main
+  .container.py-5
+    
+block subscribe
+  .col-12.col-md-6.slogan.mb-3
+    div.font-weight-bold.text-center.text-md-left 你就是六角的下一個學生！
+      br
+      | 快留下資料讓我們認識你吧
+  .col-12.col-md-6
+    form
+      .form-group.d-flex.flex-column.mb-0.mb-md-3
+        input#nameInput.mb-3.font-weight-bold(type="text", placeholder="你的名字是？")
+        input#emailInput.mb-3.font-weight-bold(type="email", placeholder="example@mail.com.tw")
+        button.btn.btn-hex.btn-lg.mx-auto.mx-md-0.ml-md-auto(type="submit") 送&nbsp&nbsp&nbsp出

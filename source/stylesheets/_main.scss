@@ -4,6 +4,10 @@ body {
   text-justify: auto; // background-color: $gray-900;
 }
 
+ul {
+  list-style: none;
+}
+
 .wrapper {
   display: block;
   position: relative;
@@ -38,8 +42,7 @@ body {
 
 .mask {
   height: 560px;
-  background-color: #282828;
-  background-image: url(../images/banner_photo.jpg);
+  background-color: #282828; // background-image: url(../images/banner_photo.jpg);
   background-position: left top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -49,7 +52,7 @@ body {
     @include media-breakpoint-down(md) {
       font-size: 2rem;
       line-height: 3rem;
-    } 
+    }
   }
   a {
     font-size: 1.25rem;
@@ -67,6 +70,19 @@ body {
   .banner {
     position: absolute;
     bottom: 140px;
+  }
+  img {
+    height: 132px;
+    position: absolute;
+    top: 118px;
+    right: 0;
+    @include media-breakpoint-down(md) {
+      transform: scale(.8);
+      top: 100px;
+    }
+    @include media-breakpoint-down(sm) {
+      left: 0;
+    }
   }
 }
 
@@ -130,7 +146,30 @@ footer {
       padding-right: 0px;
     }
   }
-  ul {
-    list-style: none;
+}
+
+// course
+.name-lg {
+  font-size: 2.25rem;
+  line-height: 49px;
+}
+
+ol {
+  line-height: 1.5rem;
+  li {
+    padding-left: 1rem;
+  }
+}
+
+.main-point {
+  line-height: 51px;
+  li {
+    height: 50px;
+    color: $gray-600;
+    padding-left: 2.3rem;
+    &:nth-child(2n - 1) {
+      background-color: $gy;
+      color: $gray-800;
+    }
   }
 }
