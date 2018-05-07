@@ -1,10 +1,6 @@
 extends layout.pug
 block nav
-  a.nav-item.nav-link.text-hex.active(href='index.html')
-    | 首頁 
-    span.sr-only (current)
-  a.nav-item.nav-link.text-light(href='course.html') 課程
-  a.nav-item.nav-link.text-light(href='qa.html') 問答
+  - var page = 'index'
 block header
   .mask(style='background-image: url(../images/banner_photo.jpg);')
     .container.h-100
@@ -13,15 +9,15 @@ block header
           span.text-hex 六角學院
           br
           | 帶你一起攻略前端設計
-        a(href="http://").btn.btn-lg.btn-hex.font-weight-bold 馬上去註冊
+        a(href="http://www.hexschool.com/").btn.btn-lg.btn-hex.font-weight-bold 馬上去註冊
           i.fas.fa-arrow-right.ml-4
 block main
   .container.py-5
     //- 精選課程
     .intro.d-flex.align-items-center.flex-column.flex-md-row.align-items-md-end
       h2.font-weight-bold.text-hex.mb-md-0 精選課程
-      span.h4.text-secondary.ml-3.mb-md-0 幫助你拿到前端工程師的門票
-      a(href="http://").btn.btn-outline-hex.ml-md-auto 更多課程
+      span.h5.text-secondary.ml-3.mb-md-0 幫助你拿到前端工程師的門票
+      a(href="http://www.hexschool.com/").btn.btn-outline-hex.ml-md-auto 更多課程
     .card-deck.mt-3.mb-5
       .card
         img.card-img-top(src='images/Html.svg', alt='Card image cap', height='135px').mt-5.mb-3
@@ -43,7 +39,7 @@ block main
     //- 課程比較
     .intro.d-flex.align-items-center.flex-column.flex-md-row.align-items-md-end
       h2.font-weight-bold.text-hex.mb-md-0 課程比較
-      span.h4.text-secondary.ml-3.mb-md-0 線上課程與實體課程的差異
+      span.h5.text-secondary.ml-3.mb-md-0 線上課程與實體課程的差異
     .table-responsive.mt-4
       table.table.text-center.font-weight-bold
         thead

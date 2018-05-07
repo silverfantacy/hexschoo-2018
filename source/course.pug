@@ -1,17 +1,13 @@
 extends layout.pug
 block nav
-  a.nav-item.nav-link.text-light(href='index.html')
-    | 首頁 
-    span.sr-only (current)
-  a.nav-item.nav-link.text-hex.active(href='course.html') 課程
-  a.nav-item.nav-link.text-light(href='qa.html') 問答
+  - var page = 'course'
 block header
   .mask(style='background-image: url(../images/banner_photo2.jpg);')
     .container.h-100
       .banner
         h1.text-light.font-weight-bold HTML、CSS 開發網站
         h4.font-weight-bold.text-hex 從無到有學會網頁設計
-        a(href="#").btn.btn-lg.btn-hex.font-weight-bold.mt-5 現在上課去
+        a(href="http://www.hexschool.com/").btn.btn-lg.btn-hex.font-weight-bold.mt-5 現在上課去
           i.fas.fa-arrow-right.ml-4
       img(src='images/css.svg')
 block main
@@ -20,12 +16,14 @@ block main
       .col-md-2
       .col-md-8
         //- 創辦人
-        div.d-flex.flex-column.flex-md-row.justify-content-between.align-items-center
+        div.d-flex.flex-column.flex-lg-row.justify-content-between.align-items-center
           .photo
             img(src="images/photo.png", alt="")
-          .h2.text-hex.font-weight-bold.name-lg 廖洧杰
+          .h2.text-hex.font-weight-bold.name-lg.d-none.d-lg-block 廖洧杰
             br
             |
+            span.text-dark 老師
+          .h2.text-hex.font-weight-bold.name-lg.d-lg-none.my-3 廖洧杰
             span.text-dark 老師
           ul.pl-0.text-secondary
             li ‧&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp高雄前端社群發起人
@@ -34,18 +32,18 @@ block main
             li ‧&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp十年實務經驗
             li ‧&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp授課時數超過一千小時
         //- 優點
-        .intro.d-flex.align-items-center.flex-column.flex-md-row.align-items-md-end.mt-5
-          h2.font-weight-bold.text-hex.mb-md-0 這堂課程有什麼特別的？
-          span.h4.text-secondary.ml-3.mb-md-0 六角課程的四大優點
+        .intro.d-flex.align-items-center.flex-column.flex-lg-row.align-items-lg-end.mt-5
+          h2.font-weight-bold.text-hex.mb-lg-0 這堂課程有什麼特別的？
+          span.h5.text-secondary.ml-3.mb-lg-0 六角課程的四大優點
         ol(style="padding-left: 20px;").mt-4.font-weight-bold.text-dark
           li 有能力排出具專業、語意化、美觀的網頁設計
           li 課程結束後，會提供給你一個完整的網頁設計稿，當你實作出網頁後，就可以轉交六角學院的講師們進行程式碼審視，以確保你吸收的網頁排版觀念是正確的。
           li 了解設計網頁的脈絡，你隨時可以在社群裡發問問題，我們永遠都會在這裡！
           li 獲得持續更新的講義教材，終身複習不會脫離趨勢的現代化線上課程。
         //- 大綱
-        .intro.d-flex.align-items-center.flex-column.flex-md-row.align-items-md-end.mt-5
-          h2.font-weight-bold.text-hex.mb-md-0 課程大綱
-          span.h4.text-secondary.ml-3.mb-md-0 最扎實的學習內容編排
+        .intro.d-flex.align-items-center.flex-column.flex-lg-row.align-items-lg-end.mt-5
+          h2.font-weight-bold.text-hex.mb-lg-0 課程大綱
+          span.h5.text-secondary.ml-3.mb-lg-0 最扎實的學習內容編排
         ul.main-point.font-weight-bold.pl-0
           li.mt-4 章節標題
           li 網頁編輯器、HTML基礎教學
@@ -60,10 +58,12 @@ block main
           li 課程作業
       .col-md-2
 block subscribe
-  .col-12.col-md-6.slogan.mb-3
+  .col-md-2
+  .col-12.col-md-5.col-lg-5.slogan.mb-3.mb-lg-0
     div.font-weight-bold.text-center.text-md-left 心動不如馬上行動！
       br
       | 現在就成為我們的學生吧
-  .col-12.col-md-6.d-flex.flex-column.justify-content-end
-    a(href="http://").btn.btn-lg.btn-hex.font-weight-bold 馬上去註冊
-          i.fas.fa-arrow-right.ml-4
+  .col-12.col-md-3.col-lg-3.d-flex.flex-column.justify-content-end.px-5.px-md-0
+    a(href="http://www.hexschool.com/").btn.btn-lg.btn-hex.font-weight-bold 馬上去註冊
+          i.fas.fa-arrow-right.ml-4.ml-md-2.ml-lg-4
+  .col-md-2

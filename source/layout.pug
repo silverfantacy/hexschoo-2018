@@ -21,6 +21,25 @@ html(lang="en")
             #navbarNavAltMarkup.collapse.navbar-collapse
               .navbar-nav.text-center.ml-auto.flex-row.justify-content-around
                 block nav
+                case page
+                  when 'index'
+                    a.nav-item.nav-link.text-hex.active(href='index.html')
+                      | 首頁 
+                      span.sr-only (current)
+                    a.nav-item.nav-link.text-light(href='course.html') 課程
+                    a.nav-item.nav-link.text-light(href='qa.html') 問答
+                  when 'course'
+                    a.nav-item.nav-link.text-light(href='index.html')
+                      | 首頁 
+                      span.sr-only (current)
+                    a.nav-item.nav-link.text-hex.active(href='course.html') 課程
+                    a.nav-item.nav-link.text-light(href='qa.html') 問答
+                  when 'qa'
+                    a.nav-item.nav-link.text-light(href='index.html')
+                      | 首頁 
+                      span.sr-only (current)
+                    a.nav-item.nav-link.text-light(href='course.html') 課程
+                    a.nav-item.nav-link.text-hex.active(href='qa.html') 問答
       header
         block header
       main
